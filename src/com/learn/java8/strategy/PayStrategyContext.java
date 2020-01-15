@@ -1,16 +1,14 @@
-package com.pattern.demo.strategy;
+package com.learn.java8.strategy;
 
 /**
- * @Auth:chenxinghua
- * @Date:2018\1\31 0031 16:28
- * @Description:
+ * 支付执行入口的上下文
+ *
+ * @author Yiuanhm
  */
 public class PayStrategyContext {
 
     private IPayStrategy payStrategy;
 
-    public PayStrategyContext() {
-    }
 
     /**
      * 执行支付

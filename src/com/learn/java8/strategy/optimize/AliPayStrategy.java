@@ -1,25 +1,31 @@
-package com.pattern.demo.strategy.im;
+package com.learn.java8.strategy.optimize;
 
-import com.pattern.demo.strategy.IPayStrategy;
+import com.learn.java8.strategy.IPayStrategy;
 
 /**
- * @Auth:chenxinghua
- * @Date:2018\1\31 0031 16:29
- * @Description:支付宝
+ *
+ * 支付宝支付
+ *
+ * @author Yiuanhm
  */
 public class AliPayStrategy implements IPayStrategy {
+
     private static AliPayStrategy aliPayStrategy;
 
-    private AliPayStrategy() {
+    private AliPayStrategy(){
+
     }
 
-    public static AliPayStrategy getInstance() {
-        if (null == aliPayStrategy) {
+    public static AliPayStrategy getInstance(){
+        if(null == aliPayStrategy){
             aliPayStrategy = new AliPayStrategy();
         }
         return aliPayStrategy;
     }
 
+    /**
+     * 支付宝支付使用
+     */
     @Override
     public void pay() {
         System.out.println("支付宝支付.");
